@@ -1,0 +1,5 @@
+Call a new object with the NEW keyword!
+Objects and functions are basically the same, so in JS you need to be careful :).
+
+Also, the character class is written MOSTLY correctly, but it definitely has some flaws. Use the preferred JS notation,
+because that class will piss off a lot of JS developers, I think.

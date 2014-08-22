@@ -1,0 +1,216 @@
+Take Runequest: put into game engine.
+
+runequest: LAST ONE!!! This is completely open, and widely liked.
+
+80 characteristic design points
+1 point in a characteristic = 1 design point
+cannot have lower than 6 or greater than 18
+
+Should I start my army at all 12 (average)?
+
+Strength (reduce to 0, become bed-ridden)
+Con (reduce to 0, hero dies)
+Size (hit points, with strength)
+Int (extremely important!)
+Power (reduce to 0, hero dies)
+Charisma: influences number of improvement rolls the adventurer has when opportunities for skill and characteristic improvements com around.
+
+Actions (INT + DEX) / 2) / 6 and ROUND DOWN
+if (INT + DEX) /2 = 6 or less: 1 action
+7-12: 2 actions
+13-18: 3 actions
++1 action for each additional 6 points
+
+Damage Modifier:
+STR + SIZ
+1-5: -1D8
+6-10: -1D6
+11-15: -1D4
+16-20: -1D2
+21-25: +0
+26-30: +1D2
+31-35: +1D4
+36-40: +1D6
+41-45: +1D8
+46-50: +1D10
+51-60: +1D12
+61-70: +2D6
+71-80: +2D8
+81-90: +2D10
+91-100: +2D12
+
+
+Hit points = Con + Size
+There is a location table here:
+Legs
+Abdomen
+Chest
+Each Arm
+HEad
+
+could also just use total HP count.
+
+CHA improvement roll modifier:
+6 or less: -1
+7-12: 0
+13-18: +1
+for each 6 above: +1 again
+
+Magic Points == Pow
+
+Movement = 8
+
+Strike Rank = (INT + DEX) / 2 Round UP
+strikeRank -= armor encumberance (Total Armour points / 5)
+
+skills have base ranks based on attributes. Will need to generate that.
+
+Common skills: Everyone has this
+
+We choose cultural background: peasant
+
+profession = farmer
+background: get bonuses, but have to create my own template.
+
+we get 250 skill points.
+
+Forego those. HAHAHAHA!
+But give those to opponents :D.
+Also, we don't access common magic, but it exists.
+
+
+skills: after modifiers, roll under percent.
+A roll that is equal to or less than 10% of the modified value is a critical success
+a roll of 01 is ALWAYS a critical success.
+
+fumbles occur on a 99 or 100...ouch!
+
+01 to 05 is automatic success
+96 to 00 is automatic failure
+
+opposed skills: skill is actively resisted by another.
+Winner is the one who gains the higher LEVEL of success
+
+(i.e. succeede by 10 points vs. succeede by 5 pts. IT's not on the die roll but by how much you succeeded)
+
+if a character has over 100% in a skill, however much he is over by, he subtracts that value from the other players' skills.
+
+One improvement roll will increase 1 known skill...
+roll 1D100. Add your Int to that. If you roll GREATER than the skills score, raise it by 1D4 + 1 points.
+Otherwise raise it by 1.
+
+Improve characteristics:
+To improve a characteristic, Improvement rolls equal to that characteristic's current value must be used.
+
+Combat is deadly
+Combat is tactical.
+Combat: trained in styles. Spear and Shield, Sword and Shield, GreateSpear, Greatsword, GreatAxe
+
+Engine for substituting weapons:
+
+-10% skill for different weapon
+-10% for each size category difference
+-10% for each reach category difference
+-5% for each point of encumberence
+
+Ouch...you just don't want to do this.
+
+Strike rank
+1d10 + Strike Rank -( (totalled armour points on all locations) / 5)
+
+Movement:
+
+may move upt to standard movement allowance.
+EACH combat action may take some or all of the character's allotted movement
+
+Also, defensive actions are combat actions: parrying, etc...
+
+Options:
+attack
+Cast Spell
+Change distance (closing or disengaging...further rules)
+Change stance (get up from prone, etc)
+Delay: changes strike rank while character waits to attack. If strike rank hits 0, nothing happens
+Do Nothing: stupid idea
+Evade: parry, dodge, etc..
+Move: if unengaged, adventurer may move
+Outmanoeuver: Adventurer may engage multiple opponents ina  group opposed test of evade skill. Those who fail to beat him/her cannot attack that combat round.
+Ready Weapon
+
+WEapons:
+Size, Reach, weight, damage, etc..
+
+Defensive combat manoeuvre:
+PArrying
+Successful roll:
+if the weapon is of equal or greater size: defender gets 0 damage
+One size difference: half damage
+Greater size difference than this: no damage deflected.
+
+If attack fails, then you can still try to parry and gain a  defensive combat manoeuvre.
+
+if one fails and the other succeedes: the successor gets one combat manoeuver.
+If both fail, nothing
+if one fumbles and other fails, failure gets one combat manoeuver
+if both fumble, nothing
+if one fumbles and one succeedes, two combat manoeuvres for successor.
+If one crits and other fumbles, 3 combat manoeuvres
+one crit and other fail, 2 combat manoeuvres.
+one crit and one success, 1 combat manoeuvre.
+
+Combat manoeuvres are strange...There may be a better way to do this. Re-read rules...
+
+This maybe the last part of combat incorporated into the engine.
+
+Also, close combat situational modifiers:
+helpless, surprised, prone, unstable ground, confined situation, defending on lower ground or against mounted foe (mportant!), fighting in partial darkness, fighting in darkness, fighting wile blind or in pitch black.
+
+Cover: important
+check out choose location rules
+
+knockback: any damage greater than size of one receiving damage, causes knockback.
+
+Evade: one defender against multiple opponents. If evade successful, still cannot reduce opponents to less than one.
+
+review rules for weapon reach. They are kind of cool.
+
+wind affects missile weapons.
+Light wind: -5%
+Moderate wind: -10%
+Strong Wind: -50% (this would kill us!)
+
+Target has moved:
+10M or more: -10%
+30m or more: -20%
+
+This hampers ranged attack too... interesting.
+
+Target is helpless: +10%
+Target is obscured partial darkness, mist, etc..: 20%
+target is more obscured: thick smoke, etc..: 40%
+Target is prone: -10%
+
+rules for firing into crowd: helpful at beginning.
+
+Magic points: regained after 6 hours of sleep, or 12 waking hours. Minus a pact.
+
+Pact (CHA + Dedicated POW)
+Pow dedicated = minimum 1 point and maximum 1/4 of POW
+IF critical success: spell is cast, and may be recast
+if success: spell is cast and must be re-given
+If failure: spell is not cast, but is still available.
+Fumble: spell is unavailable, and must be re-gotten
+
+Magnitude of divine spells: power percentage, divided by 10. Rounded up.
+Skill of divine power: lore skill.
+
+To regain spell:
+Initiate: a day after cast, at holy place
+Acolyte: a day after cast, wherever. But if failed to regain, must go to holy place
+PRiest: may regain spell wherever, an hour after it was cast. BUT if failure, must go to holy place
+High priest: if failure may still regain spell wherever. Must only return to shrine if critical failure
+
+
+High priest: everything goes to divine power.
+
+A lot of these rules can be changed...
