@@ -82,4 +82,6 @@ function getAdvancedSkills()
     advancedSkillSet.add(new AdvancedSkill("Sorcery", "INT", "INT"));
     advancedSkillSet.add(new AdvancedSkill("Manipulation", "INT", "POW"));
 
+  return advancedSkillSet;
+
 }

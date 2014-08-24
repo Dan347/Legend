@@ -1,0 +1,21 @@
+Workflow:
+
+create character.
+
+Character is poco object.
+
+
+We create advanced skills that the character has.
+We assign the advanced skills to a holder object.
+We assign basic skills to a holder object.
+We create attributes. Assign this to an attributes object.
+We then create the character: name, advanced skills, basic skills, and attributes.
+
+For the character...we almost don't need attributes. Can use the builder to create the pieces of the character, and the character will hold the
+base objects.
+
+Currently: finish CharacterBuilder. Need to build skills.
+AdvancedSkills: ONLY SPECIFIC SKILLS ARE BUILT!
+BasicSkills: All skills are built.
+
+Then begin writing combat rules engine :).

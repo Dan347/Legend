@@ -6,17 +6,12 @@
 
 "use strict";
 
-function Character(name, str, dex, con, size, int, pow, cha)
+function Character(name, attributes)
 {
-    str = getAttributeOrDefault(str);
-    dex = getAttributeOrDefault(dex);
-    con = getAttributeOrDefault(con);
-    size = getAttributeOrDefault(size);
-    int = getAttributeOrDefault(int);
-    pow = getAttributeOrDefault(pow);
-    cha = getAttributeOrDefault(cha);
     var dedpow = 0;
-
+    var stats = attributes;
+    var advancedSkills = [];
+    var basicSkills = [];
     Object.defineProperty(this, "charName", {
        get: function() {
            return name;
@@ -25,63 +20,13 @@ function Character(name, str, dex, con, size, int, pow, cha)
         writable: false
     });
 
-    Object.defineProperty(this, "Str", {
+    Object.defineProperty(this, "Stats", {
        get: function() {
-           return str;
+           return att;
        },
        set: function(value){
-           str = value;
+           att = value;
        },
-        enumerable: true
-    });
-
-    Object.defineProperty(this, "Dex", {
-        get: function() {
-            return dex;
-        },
-        set: function(value){
-            dex = value;
-        },
-        enumerable: true
-    });
-
-    Object.defineProperty(this, "Con", {
-        get: function() {
-            return con;
-        },
-        set: function(value){
-            con = value;
-        },
-        enumerable: true
-    });
-
-    Object.defineProperty(this, "Size", {
-        get: function() {
-            return size;
-        },
-        set: function(value){
-            size = value;
-        },
-        enumerable: true
-    });
-
-    Object.defineProperty(this, "Int", {
-        get: function() {
-            return int;
-        },
-        set: function(value){
-            int = value;
-        },
-        enumerable: true
-    });
-
-    Object.defineProperty(this, "Pow", {
-        get: function() {
-            return pow;
-        },
-        set: function(value){
-            pow = value;
-        },
         enumerable: true
     });
 
@@ -95,21 +40,12 @@ function Character(name, str, dex, con, size, int, pow, cha)
         enumerable: true
     });
 
-    Object.defineProperty(this, "Cha", {
-        get: function() {
-            return cha;
-        },
-        set: function(value){
-            cha = value;
-        },
-        enumerable: true
-    });
 
 
     Object.defineProperty(this, "Actions", {
         get: function()
         {
-            return getActions(Int, Dex);
+            return getActions(this.Stats.int, this.Stats.dex);
         },
 
         enumerable: true,
@@ -120,7 +56,7 @@ function Character(name, str, dex, con, size, int, pow, cha)
     Object.defineProperty(this, "mp", {
         get: function()
         {
-            return Pow;
+            return this.Stats.pow;
         },
         enumerable: true,
         writable: false
@@ -129,7 +65,7 @@ function Character(name, str, dex, con, size, int, pow, cha)
     Object.defineProperty(this, "enc", {
         get: function()
         {
-            return Str + Size;
+            return this.Stats.str + this.Stats.size;
         },
         enumerable: true,
         writable: false
@@ -145,11 +81,27 @@ function Character(name, str, dex, con, size, int, pow, cha)
 
     Object.defineProperty(this, "HP", {
         get: function() {
-            return getHp(Size, Con);
+            return getHp(this.Stats.Size, this.Stats.Con);
         },
         enumerable: true,
         writable: false
     });
+
+  Object.defineProperty(this, "AdvancedSkills", {
+  get function() {
+    return advancedSkills[];
+  },
+        enumerable: true,
+        writable: false
+  });
+
+  Object.defineProperty(this, "BasicSkills", {
+  get function() {
+        return basicSkills[];
+  },
+      enumerable: true,
+      writable: false
+  });
 
     this.skills = []; //create separate skills objects. Populate this after skills objects are created
     this.equipment = [];
@@ -174,15 +126,7 @@ function getHp(size, con)
     return math.floor((size * con / 5)) * 8;
 }
 
-function getAttributeOrDefault(attribute)
-{
-    var defaultValue = 12;
-    if(isNaN(attribute))
-    {
-        return defaultValue;
-    }
-    return attribute;
-}
+
 
 
 
