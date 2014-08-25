@@ -24,8 +24,6 @@ function buildCharacter(name, attributes, advancedSkills, basicSkills)
   var basicSkills = setBasicSkills(attributes);
   var advancedSkills = setAdvancedSkills(advancedSkillNames, attributes)
   var char = new Character(name, attributes, advancedSkills, basicSkills);
-
-
 }
 
 function buildCharacterAndAttributes(name, strength, dexterity, constitution, size, intelligence, power, charisma)

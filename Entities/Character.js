@@ -103,7 +103,6 @@ function Character(name, attributes)
       writable: false
   });
 
-    this.skills = []; //create separate skills objects. Populate this after skills objects are created
     this.equipment = [];
 
     //Damage Modifiers: use table, or dictionary, etc.. Use a setup method, then put one value here.
