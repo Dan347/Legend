@@ -21,10 +21,12 @@ function CharacterBuilder()
 
 function buildCharacter(name, strength, dexterity, constitution, size, intelligence, power, charisma, advancedSkills, basicSkills)
 {
-  var attributes = new Attributes(strenght, dexterity, constitution, size, intelligence, power, charisma);
+  var attributes = new Attributes(strength, dexterity, constitution, size, intelligence, power, charisma);
   var basicSkills = setBasicSkills(attributes);
   var advancedSkills = setAdvancedSkills(advancedSkillNames, attributes)
   var char = new Character(name, attributes, advancedSkills, basicSkills);
+
+  return char;
 }
 
 function setBasicSkills(attributes)
