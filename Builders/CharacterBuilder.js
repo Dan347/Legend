@@ -11,8 +11,6 @@ I need factories inside of here.
 function CharacterBuilder() {
 
     "use strict";
-    return this;
-
 
     function buildCharacter(name, strength, dexterity, constitution, size, intelligence, power, charisma, advancedSkillSet, basicSkillSet, combatSkillSet) {
 

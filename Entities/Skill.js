@@ -7,6 +7,7 @@
 function Skill(name, attribute1, attribute2, value)
 {
     "use strict";
+
     var _name = name;
     var _attribute1 = attribute1;
     var _attribute2 = attribute2;

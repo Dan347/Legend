@@ -2,10 +2,10 @@
  * Created by Doshea on 8/18/2014.
  * skill POCO
  */
-"use strict";
-
 function AdvancedSkill(name, attribute1, attribute2, desc)
 {
+    "use strict";
+
     Object.defineProperty(this, "name", {
         get: function() {
             return name;
