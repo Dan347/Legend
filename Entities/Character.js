@@ -9,7 +9,7 @@
 function Character(name, attributes)
 {
     var dedpow = 0;
-    var stats = attributes;
+    var _stats = attributes;
     var advancedSkills = [];
     var basicSkills = [];
     Object.defineProperty(this, "charName", {
@@ -22,10 +22,10 @@ function Character(name, attributes)
 
     Object.defineProperty(this, "Stats", {
        get: function() {
-           return att;
+           return _stats;
        },
        set: function(value){
-           att = value;
+           _stats = value;
        },
         enumerable: true
     });
@@ -45,7 +45,7 @@ function Character(name, attributes)
     Object.defineProperty(this, "Actions", {
         get: function()
         {
-            return getActions(this.Stats.int, this.Stats.dex);
+            return getActions(_stats.int, _stats.dex);
         },
 
         enumerable: true,
@@ -56,7 +56,7 @@ function Character(name, attributes)
     Object.defineProperty(this, "mp", {
         get: function()
         {
-            return this.Stats.pow;
+            return _stats.pow;
         },
         enumerable: true,
         writable: false
@@ -65,7 +65,7 @@ function Character(name, attributes)
     Object.defineProperty(this, "enc", {
         get: function()
         {
-            return this.Stats.str + this.Stats.size;
+            return _stats.str + _stats.size;
         },
         enumerable: true,
         writable: false
@@ -81,7 +81,7 @@ function Character(name, attributes)
 
     Object.defineProperty(this, "HP", {
         get: function() {
-            return getHp(this.Stats.Size, this.Stats.Con);
+            return getHp(_stats.Size, _stats.Con);
         },
         enumerable: true,
         writable: false
