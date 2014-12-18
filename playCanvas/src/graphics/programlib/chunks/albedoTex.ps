@@ -1,6 +1,0 @@
-uniform sampler2D texture_diffuseMap;
-void getAlbedo(inout psInternalData data) {
-    vec4 tex = texture2DSRGB(texture_diffuseMap, $UV);
-    data.albedo = tex.rgb;
-}
-
