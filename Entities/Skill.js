@@ -4,33 +4,43 @@
  * this is also a POCO, a basic viewModel. Remember Dylan's instructions
  */
 
-
-"use strict";
-
-function Skill(name, attribute1, attribute2)
+function Skill(name, attribute1, attribute2, value)
 {
+    "use strict";
+    var _name = name;
+    var _attribute1 = attribute1;
+    var _attribute2 = attribute2;
+    var _value = value;
     Object.defineProperty(this, "name", {
         get: function() {
-            return name;
+            return _name;
         },
         enumerable: true,
         writable: false
     });
 
-    Object.defineProperty(this, "attribute1", {
+    Object.defineProperty(this, "Attribute1", {
         get: function() {
-            return attribute1;
+            return _attribute1;
         },
         enumerable: true,
         writable: false
     });
 
-    Object.defineProperty(this, "attribute2", {
+    Object.defineProperty(this, "Attribute2", {
         get: function() {
-            return attribute2;
+            return _attribute2;
         },
         enumerable: true,
         writable: false
+    });
+
+    Object.defineProperty(this, "value", {
+       get: function() {
+           return _value;
+       }
+
+
     });
 
 }
