@@ -4,10 +4,10 @@
 //This is the base class of every character.
 //this is also a POCO, a basic viewModel. Remember Dylan's instructions
 
-"use strict";
-
 function Character(name, attributes)
 {
+    "use strict";
+
     var dedpow = 0;
     var _stats = attributes;
     var advancedSkills = [];
