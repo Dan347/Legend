@@ -7,10 +7,10 @@
 function Character(name, attributes) {
     "use strict";
 
-    var dedpow = 0;
+    var _dedpow = 0;
     var _stats = attributes;
-    var advancedSkills = [];
-    var basicSkills = [];
+    var _advancedSkills = [];
+    var _basicSkills = [];
     Object.defineProperty(this, "charName", {
         get: function () {
             return name;
@@ -34,7 +34,7 @@ function Character(name, attributes) {
             return 0;
         },
         set: function (value) {
-            dedpow = value;
+            _dedpow = value;
         },
         enumerable: true
     });
@@ -84,7 +84,7 @@ function Character(name, attributes) {
 
     Object.defineProperty(this, "AdvancedSkills", {
         get function () {
-            return advancedSkills[];
+            return _advancedSkills;
         },
         enumerable: true,
         writable: false
@@ -92,7 +92,7 @@ function Character(name, attributes) {
 
     Object.defineProperty(this, "BasicSkills", {
         get function () {
-            return basicSkills[];
+            return _basicSkills;
         },
         enumerable: true,
         writable: false
