@@ -16,7 +16,7 @@ function Character(name, attributes)
        get: function() {
            return name;
        },
-        enumerable: true,,
+        enumerable: true,
         writable: false
     });
 
