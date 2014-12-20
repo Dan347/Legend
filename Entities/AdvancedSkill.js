@@ -37,4 +37,6 @@ function AdvancedSkill(name, attribute1, attribute2, desc)
         enumerable: true,
         writable: false
     });
+
+    return this;
 }

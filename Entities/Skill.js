@@ -33,4 +33,5 @@ function Skill(name, attribute1, attribute2)
         writable: false
     });
 
+    return this;
 }

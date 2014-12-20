@@ -105,7 +105,7 @@ function Character(name, attributes) {
 
     function getActions(int, dex) {
         var actions = (int + dex) / 2;
-        actions = Math.Floor(this.actions);
+        actions = Math.Floor(actions);
         if (actions < 1) {
             actions = 1;
         }
@@ -118,4 +118,6 @@ function Character(name, attributes) {
     }
 
     Object.seal(this);
+
+    return this;
 }
