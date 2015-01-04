@@ -6,33 +6,38 @@
 
 function AdvancedSkill(name, attribute1, attribute2, desc)
 {
-    Object.defineProperty(this, "name", {
+
+  var _name = name;
+  var _attribute1 = attribute1;
+  var _attribute2 = attribute2;
+  var _desc = desc;
+    Object.defineProperty(this, "Name", {
         get: function() {
-            return name;
+            return _name;
         },
         enumerable: true,
         writable: false
     });
 
-    Object.defineProperty(this, "attribute1", {
+    Object.defineProperty(this, "Attribute1", {
         get: function() {
-            return attribute1;
+            return _attribute1;
         },
         enumerable: true,
         writable: false
     });
 
-    Object.defineProperty(this, "attribute2", {
+    Object.defineProperty(this, "Attribute2", {
         get: function() {
-            return attribute2;
+            return _attribute2;
         },
         enumerable: true,
         writable: false
     });
 
-    Object.defineProperty(this, "desc", {
+    Object.defineProperty(this, "Desc", {
         get: function() {
-            return desc
+            return _desc
         },
         enumerable: true,
         writable: false

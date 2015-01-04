@@ -1,11 +1,3 @@
-/**
- * Created by Doshea on 8/2/2014.
- * This is the base class of every skill.
- * this is also a POCO, a basic viewModel. Remember Dylan's instructions
- */
-
-
-
 function Skill(name, attribute1, attribute2, value)
 {
   "use strict";
