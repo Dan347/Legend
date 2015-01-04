@@ -13,27 +13,38 @@ I need factories inside of here.
 function CharacterBuilder()
 {
     "use strict";
-    function buildCharacter(name, strength, dexterity, constitution, size, intelligence, power, charisma, advancedSkills, basicSkills)
+    function buildCharacter(name, strength, dexterity, constitution, size, intelligence, power, charisma, advancedSkillNames)
     {
         var attributes = new Attributes(strength, dexterity, constitution, size, intelligence, power, charisma);
         var basicSkills = setBasicSkills(attributes);
-        var advancedSkills = setAdvancedSkills(advancedSkillNames, attributes)
+        var advancedSkills = setAdvancedSkills(advancedSkillNames, attributes);
         var char = new Character(name, attributes, advancedSkills, basicSkills);
 
         return char;
     }
 
-    function setBasicSkills(attributes)
-    {
+    function setBasicSkills(attributes) {
+        var basicSkills = skillRepository().getBasicSkills().skillSet;
+        skillSet.map(function (skill) {
+            var value = attributes(skill.Attribute1) + attributes(skill.Attribute2) / 2;
+            skill.Value += value;
+
+            return skill;
+        });
     }
-
-    function buildAdvancedSkills(character, attributes)
+    function buildAdvancedSkills(skillNames, attributes)
     {
-
+      var advancedSkills = skillRepository().getAdvancedSkills().skillSet;
+      skillSet.map(function(skill)
+      {
+        if(skillNames.indexOf(skill.Name) !== 0)
+        {
+          var value = attributes(skill.Attribute1) + attributes(skill.Attribute2) / 2;
+          skill.Value += value;
+          return skill;
+        }
+      });
     }
-
-
-
 
     return this;
 }

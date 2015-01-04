@@ -5,33 +5,46 @@
  */
 
 
-"use strict";
 
-function Skill(name, attribute1, attribute2)
+function Skill(name, attribute1, attribute2, value)
 {
-    Object.defineProperty(this, "name", {
+  "use strict";
+
+var _name = name;
+var _attribute1 = attribute1;
+var _attribute2 = _attribute2;
+var _value = value;
+    Object.defineProperty(this, "Name", {
         get: function() {
-            return name;
+            return _name;
         },
         enumerable: true,
         writable: false
     });
 
-    Object.defineProperty(this, "attribute1", {
+    Object.defineProperty(this, "Attribute1", {
         get: function() {
-            return attribute1;
+            return _attribute1;
         },
         enumerable: true,
         writable: false
     });
 
-    Object.defineProperty(this, "attribute2", {
+    Object.defineProperty(this, "Attribute2", {
         get: function() {
-            return attribute2;
+            return _attribute2;
         },
         enumerable: true,
         writable: false
     });
+
+    Object.defineProperty(this, "Value", {
+      get: function() {
+        return _value;
+      },
+      enumerable: true,
+      writable: true
+    })
 
     return this;
 }
