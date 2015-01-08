@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efcfa671-5d68-46e7-857e-6d147dca0af8" name="Default" comment="Modified Skill and skillRepository.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Entities/Skill.js" afterPath="$PROJECT_DIR$/Entities/Skill.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Repositories/skillRepository.js" afterPath="$PROJECT_DIR$/Repositories/skillRepository.js" />
+    <list default="true" id="efcfa671-5d68-46e7-857e-6d147dca0af8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RuneQuest.iws" />
@@ -378,7 +376,11 @@
       <created>1420751569770</created>
       <updated>1420751569770</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Modified Skill and skillRepository.">
+      <created>1420753046977</created>
+      <updated>1420753046977</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
