@@ -10,9 +10,11 @@ I need factories inside of here.
 
 //first build attributes
 //then build character
-function CharacterBuilder()
+function CharacterBuilder(name, strength, dexterity, constitution, size, intelligence, power, charisma, advancedskillNames)
 {
     "use strict";
+
+
     function buildCharacter(name, strength, dexterity, constitution, size, intelligence, power, charisma, advancedSkillNames)
     {
         var attributes = new Attributes(strength, dexterity, constitution, size, intelligence, power, charisma);

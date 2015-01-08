@@ -11,7 +11,9 @@ function Character(name, attributes) {
     var _stats = attributes;
     var _advancedSkills = [];
     var _basicSkills = [];
-    Object.defineProperty(this, "charName", {
+
+    var character = new Object();
+    character.defineProperty(this, "charName", {
         get: function () {
             return name;
         },
@@ -19,7 +21,7 @@ function Character(name, attributes) {
         writable: false
     });
 
-    Object.defineProperty(this, "Stats", {
+    character.defineProperty(this, "Stats", {
         get: function () {
             return _stats;
         },
@@ -29,7 +31,7 @@ function Character(name, attributes) {
         enumerable: true
     });
 
-    Object.defineProperty(this, "DEDPOW", {
+    character.defineProperty(this, "DEDPOW", {
         get: function () {
             return 0;
         },
@@ -40,7 +42,7 @@ function Character(name, attributes) {
     });
 
 
-    Object.defineProperty(this, "Actions", {
+    character.defineProperty(this, "Actions", {
         get: function () {
             return getActions(_stats.int, _stats.dex);
         },
@@ -50,7 +52,7 @@ function Character(name, attributes) {
     });
 
 
-    Object.defineProperty(this, "mp", {
+    character.defineProperty(this, "mp", {
         get: function () {
             return _stats.pow;
         },
@@ -58,7 +60,7 @@ function Character(name, attributes) {
         writable: false
     });
 
-    Object.defineProperty(this, "enc", {
+    character.defineProperty(this, "enc", {
         get: function () {
             return _stats.str + _stats.size;
         },
@@ -66,7 +68,7 @@ function Character(name, attributes) {
         writable: false
     });
 
-    Object.defineProperty(this, "move", {
+    character.defineProperty(this, "move", {
         get: function () {
             return 5;
         },
@@ -74,7 +76,7 @@ function Character(name, attributes) {
         writable: false
     });
 
-    Object.defineProperty(this, "HP", {
+    character.defineProperty(this, "HP", {
         get: function () {
             return getHp(_stats.Size, _stats.Con);
         },
@@ -82,7 +84,7 @@ function Character(name, attributes) {
         writable: false
     });
 
-    Object.defineProperty(this, "AdvancedSkills", {
+    character.defineProperty(this, "AdvancedSkills", {
         get function () {
             return _advancedSkills;
         },
@@ -90,7 +92,7 @@ function Character(name, attributes) {
         writable: false
     });
 
-    Object.defineProperty(this, "BasicSkills", {
+    character.defineProperty(this, "BasicSkills", {
         get function () {
             return _basicSkills;
         },
@@ -98,7 +100,7 @@ function Character(name, attributes) {
         writable: false
     });
 
-    this.equipment = [];
+    character.equipment = [];
 
     //Damage Modifiers: use table, or dictionary, etc.. Use a setup method, then put one value here.
     //how heavily encumbered = new enum, since levels of encumberance
@@ -117,7 +119,7 @@ function Character(name, attributes) {
         return math.floor((size * con / 5)) * 8;
     }
 
-    Object.seal(this);
+    Object.seal(character);
 
-    return this;
+    return character;
 }

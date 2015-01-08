@@ -8,29 +8,24 @@ module.exports = function(grunt) {
 			// 2. parameters for the "concat" task to follow here:
 			dist: {
 					src: [
-						'Builders/*.js',
+						'libs/*.js',
 						'Entities/*.js',
+                        'Repositories/*.js',
 						'Factories/*.js',
-						'libs/*.js'
+						'Builders/*.js'
 						],
-						dest: 'build/LegendTactics.js',
+						dest: 'build/LegendTactics.js'
 			}
-		},
-		uglify:{
-					build: {
-					src: 'build/LegendTactics.js',
-					dest: 'min/Legend_Tactics.min.js'
-					}
-				},
+		}
 		
 		});
 		
 		
 	// 3. Specify to Grunt we plan to use this plug-in.
 	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
+	//grunt.loadNpmTasks('grunt-contrib-uglify');
 	
 	// 4. Specify Grunt tasks to run (what will occur when you type "grunt command"
-	grunt.registerTask('default', ['concat', 'uglify']);
+	grunt.registerTask('default', ['concat']);
 	
 };

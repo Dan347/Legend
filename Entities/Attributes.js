@@ -6,7 +6,10 @@
 "use strict";
 
 function Attributes(strength, dexterity, constitution, size, intelligence, power, charisma) {
-    Object.defineProperty(this, "str", {
+
+    var attribute = new Object();
+
+    attribute.defineProperty(this, "str", {
         get: function () {
             return getAttributeOrDefault(strength);
         },
@@ -14,7 +17,7 @@ function Attributes(strength, dexterity, constitution, size, intelligence, power
         writable: false
     });
 
-    Object.defineProperty(this, "dex", {
+    attribute.defineProperty(this, "dex", {
         get: function () {
             return getAttributeOrDefault(dexterity);
         },
@@ -22,7 +25,7 @@ function Attributes(strength, dexterity, constitution, size, intelligence, power
         writable: false
     });
 
-    Object.defineProperty(this, "con", {
+    attribute.defineProperty(this, "con", {
         get: function () {
             return getAttributeOrDefault(constitution);
         },
@@ -30,7 +33,7 @@ function Attributes(strength, dexterity, constitution, size, intelligence, power
         writable: false
     });
 
-    Object.defineProperty(this, "siz", {
+    attribute.defineProperty(this, "siz", {
         get: function () {
             return getAttributeOrDefault(size);
         },
@@ -38,7 +41,7 @@ function Attributes(strength, dexterity, constitution, size, intelligence, power
         writable: false
     });
 
-    Object.defineProperty(this, "int", {
+    attribute.defineProperty(this, "int", {
         get: function () {
             return getAttributeOrDefault(intelligence);
         },
@@ -46,7 +49,7 @@ function Attributes(strength, dexterity, constitution, size, intelligence, power
         writable: false
     });
 
-    Object.defineProperty(this, "pow", {
+    attribute.defineProperty(this, "pow", {
         get: function () {
             return getAttributeOrDefault(power);
         },
@@ -54,7 +57,7 @@ function Attributes(strength, dexterity, constitution, size, intelligence, power
         writable: false
     });
 
-    Object.defineProperty(this, "cha", {
+    attribute.defineProperty(this, "cha", {
         get: function () {
             return getAttributeOrDefault(charisma);
         },
@@ -62,7 +65,7 @@ function Attributes(strength, dexterity, constitution, size, intelligence, power
         writable: false
     });
 
-    return this;
+    return attribute;
 
 
     function getAttributeOrDefault(attribute) {
