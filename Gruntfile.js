@@ -13,16 +13,9 @@ module.exports = function(grunt) {
 						'Factories/*.js',
 						'libs/*.js'
 						],
-						dest: 'build/LegendTactics.js',
+						dest: 'build/LegendTactics.js'
 			}
-		},
-		uglify:{
-					build: {
-					src: 'build/LegendTactics.js',
-					dest: 'min/Legend_Tactics.min.js'
-					}
-				},
-		
+		}
 		});
 		
 		
