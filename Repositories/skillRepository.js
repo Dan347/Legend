@@ -2,7 +2,13 @@
  * Created by Doshea on 8/18/2014.
  */
 
-function getBasicSkills() {
+
+function skillRepository() {
+
+    "use Strict";
+
+
+  function getBasicSkills() {
         this.skillSet = [];
 
         this.skillSet.add(new Skill("Athletics", "Str", "Dex"));
@@ -29,12 +35,6 @@ function getBasicSkills() {
 
         return this;
     }
-
-function skillRepository() {
-
-    "use Strict";
-
-
 
 
     function getAdvancedSkills() {
@@ -87,9 +87,3 @@ function Skills()
 
   return this;
 }
-
-
-
-var skills = new skillRepository().getBasicSkills();
-//var basicSkills = skills.getBasicSkills();
-//var something = skills.getBasicSkills();
