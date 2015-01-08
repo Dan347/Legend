@@ -16,21 +16,15 @@ module.exports = function(grunt) {
 						dest: 'build/LegendTactics.js',
 			}
 		},
-		uglify:{
-					build: {
-					src: 'build/LegendTactics.js',
-					dest: 'min/Legend_Tactics.min.js'
-					}
-				},
 		
 		});
 		
 		
 	// 3. Specify to Grunt we plan to use this plug-in.
 	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
+	//grunt.loadNpmTasks('grunt-contrib-uglify');
 	
 	// 4. Specify Grunt tasks to run (what will occur when you type "grunt command"
-	grunt.registerTask('default', ['concat', 'uglify']);
+	grunt.registerTask('default', ['concat']);
 	
 };
