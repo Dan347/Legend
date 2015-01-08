@@ -38,7 +38,7 @@ function Skill(name, attribute1, attribute2, value)
       set: function(value) { _value = value;},
       enumerable: true
     });
-
+    Object.seal(this);
     return this;
   };
 
